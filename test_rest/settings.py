@@ -89,7 +89,6 @@ DATABASES = {
 }
 
 DATABASES = {'default': dj_database_url.config(default='postgres://test_user:password@localhost:5432/data_test_rest')}
-# DATABASES['default'] = dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
