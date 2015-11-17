@@ -1,4 +1,5 @@
 from django.conf.urls import url, include
+from django.views.generic import TemplateView
 from rest_framework import routers
 from student.views import StudentViewSet
 
@@ -9,4 +10,5 @@ router.register(r'students', StudentViewSet,)
 
 urlpatterns = [
     url(r'^api/', include(router.urls)),
+    url(r'^', TemplateView.as_view(template_name="student/index.html")),
 ]
