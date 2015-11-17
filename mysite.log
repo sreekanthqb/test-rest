@@ -1,0 +1,11 @@
+[17/Nov/2015 04:37:06] DEBUG [django.db.backends:89] (0.001) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+[17/Nov/2015 04:37:06] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[17/Nov/2015 04:37:11] DEBUG [django.db.backends:89] (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = '0gd4k9p7k6uqeo6koz50l5ajrys13z6a' AND "django_session"."expire_date" > '2015-11-17T04:37:11.721598+00:00'::timestamptz); args=('0gd4k9p7k6uqeo6koz50l5ajrys13z6a', datetime.datetime(2015, 11, 17, 4, 37, 11, 721598, tzinfo=<UTC>))
+[17/Nov/2015 04:37:11] DEBUG [django.db.backends:89] (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1; args=(1,)
+[17/Nov/2015 04:37:11] DEBUG [django.db.backends:89] (0.000) SELECT "student_student"."id", "student_student"."user_id", "student_student"."name", "student_student"."location" FROM "student_student"; args=()

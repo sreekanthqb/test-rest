@@ -9,6 +9,6 @@ router.register(r'students', StudentViewSet,)
 
 
 urlpatterns = [
+    url(r'^$', TemplateView.as_view(template_name="student/index.html")),
     url(r'^api/', include(router.urls)),
-    url(r'^', TemplateView.as_view(template_name="student/index.html")),
 ]
