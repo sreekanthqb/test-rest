@@ -5,6 +5,9 @@ from django.contrib.auth.models import User
 class Course(models.Model):
     name = models.CharField(max_length=100)
 
+    def test_status(self):
+        return False
+
     def __unicode__(self):
         return "%s" % (self.name)
 
@@ -21,7 +24,6 @@ class College(models.Model):
     user = models.OneToOneField(User)
     name = models.CharField(max_length=100)
     location = models.CharField(max_length=100, null=True, blank=True)
-    courses = models.ManyToManyField(Course, blank=True)
 
     def __unicode__(self):
         return "%s" % (self.name)
@@ -34,4 +36,4 @@ class CollegeCourse(models.Model):
     year = models.IntegerField()
 
     def __unicode__(self):
-        return "%s - %s - %s - %d" % (self.name, self.course, self.branch, self.year)
+        return "%s - %s - %s - %d" % (self.college, self.course, self.branch, self.year)
