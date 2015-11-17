@@ -1,5 +1,7 @@
 from django.contrib import admin
-from college.models import College
+from college.models import College, Course, Branch, CollegeCourse
 
-# Register your models here.
 admin.site.register(College)
+admin.site.register(Course)
+admin.site.register(Branch)
+admin.site.register(CollegeCourse)
