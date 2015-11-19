@@ -20,9 +20,10 @@ from django.contrib import admin
 
 
 urlpatterns = patterns('',
-                       url(r'^', include('college.urls')),
                        url(r'^', include('student.urls')),
+                       url(r'^', include('college.urls')),
                        url(r'^admin/', include(admin.site.urls)),
+                       url(r'^docs/', include('rest_framework_swagger.urls')),
                        )
 urlpatterns += patterns('',
                         (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
